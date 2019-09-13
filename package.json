@@ -22,6 +22,8 @@
     },
     "dependencies": {
         "admin-lte": "^3.0.0-alpha.2",
-        "node-sass": "^4.12.0"
+        "node-sass": "^4.12.0",
+        "vform": "^1.0.1",
+        "vue-router": "^3.1.3"
     }
 }
