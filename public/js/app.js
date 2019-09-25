@@ -73436,6 +73436,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {
+    editModal: function editModal(user) {
+      this.form.reset();
+      $('#addNew').modal('show');
+      this.form.fill(user);
+    },
     newModal: function newModal() {
       this.form.reset();
       $('#addNew').modal('show');
@@ -73549,7 +73554,18 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("td", [
-                      _vm._m(1, true),
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "#" },
+                          on: {
+                            click: function($event) {
+                              return _vm.editModal(user)
+                            }
+                          }
+                        },
+                        [_c("i", { staticClass: "fa fa-edit text-blue" })]
+                      ),
                       _vm._v(
                         " \n                     /\n                     "
                       ),
@@ -73597,7 +73613,7 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(2),
+              _vm._m(1),
               _vm._v(" "),
               _c(
                 "form",
@@ -73836,7 +73852,7 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _vm._m(3)
+                  _vm._m(2)
                 ]
               )
             ])
@@ -73865,14 +73881,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Action")])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { attrs: { href: "#" } }, [
-      _c("i", { staticClass: "fa fa-edit text-blue" })
     ])
   },
   function() {
